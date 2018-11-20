@@ -14,6 +14,7 @@
 		232821E12189AC580038A977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 232821DF2189AC580038A977 /* LaunchScreen.storyboard */; };
 		232821EC2189AC580038A977 /* ZYAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232821EB2189AC580038A977 /* ZYAlbumTests.swift */; };
 		232821F72189AC580038A977 /* ZYAlbumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232821F62189AC580038A977 /* ZYAlbumUITests.swift */; };
+		8ABBB243191E74024749E3F9 /* Pods_ZYAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1401BB9624CA4103424FE62A /* Pods_ZYAlbum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1401BB9624CA4103424FE62A /* Pods_ZYAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F0EFF4501A1393ED3FCA8B /* Pods-ZYAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAlbum/Pods-ZYAlbum.debug.xcconfig"; sourceTree = "<group>"; };
+		1CC727984DF455EEA98D74BD /* Pods-ZYAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYAlbum/Pods-ZYAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		232821D32189AC560038A977 /* ZYAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232821D62189AC560038A977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		232821D82189AC560038A977 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ABBB243191E74024749E3F9 /* Pods_ZYAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				232821EA2189AC580038A977 /* ZYAlbumTests */,
 				232821F52189AC580038A977 /* ZYAlbumUITests */,
 				232821D42189AC560038A977 /* Products */,
+				A32F69F00AD8A70DD92EB0E4 /* Pods */,
+				63E796771EF6561F518E23A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = ZYAlbumUITests;
 			sourceTree = "<group>";
 		};
+		63E796771EF6561F518E23A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1401BB9624CA4103424FE62A /* Pods_ZYAlbum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A32F69F00AD8A70DD92EB0E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16F0EFF4501A1393ED3FCA8B /* Pods-ZYAlbum.debug.xcconfig */,
+				1CC727984DF455EEA98D74BD /* Pods-ZYAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 232821FB2189AC580038A977 /* Build configuration list for PBXNativeTarget "ZYAlbum" */;
 			buildPhases = (
+				7772165867775137DE9A7EE1 /* [CP] Check Pods Manifest.lock */,
 				232821CF2189AC560038A977 /* Sources */,
 				232821D02189AC560038A977 /* Frameworks */,
 				232821D12189AC560038A977 /* Resources */,
+				C9124D16F1ACDE18DD186424 /* [CP] Embed Pods Frameworks */,
+				CFA0C7BC829B5604C30AC58D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7772165867775137DE9A7EE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9124D16F1ACDE18DD186424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYAlbum/Pods-ZYAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFA0C7BC829B5604C30AC58D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYAlbum/Pods-ZYAlbum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		232821CF2189AC560038A977 /* Sources */ = {
@@ -430,6 +505,7 @@
 		};
 		232821FC2189AC580038A977 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F0EFF4501A1393ED3FCA8B /* Pods-ZYAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +523,7 @@
 		};
 		232821FD2189AC580038A977 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC727984DF455EEA98D74BD /* Pods-ZYAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
